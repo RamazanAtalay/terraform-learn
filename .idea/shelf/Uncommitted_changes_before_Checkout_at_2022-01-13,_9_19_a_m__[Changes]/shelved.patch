@@ -1,0 +1,107 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>### initialize\n\n    terraform init\n\n### preview terraform actions\n\n    terraform plan\n\n### apply configuration with variables\n\n    terraform apply -var-file terraform-dev.tfvars\n\n### destroy a single resource\n\n    terraform destroy -target aws_vpc.myapp-vpc\n\n### destroy everything fromtf files\n\n    terraform destroy\n\n### show resources and components from current state\n\n    terraform state list\n\n### show current state of a specific resource/data\n\n    terraform state show aws_vpc.myapp-vpc    \n\n### set avail_zone as custom tf environment variable - before apply\n\n    export TF_VAR_avail_zone=\"eu-west-3a\"\n\n### set aws configuration through env variables\n\n    export AWS_ACCESS_KEY_ID=\"anaccesskey\"\n    export AWS_SECRET_ACCESS_KEY=\"asecretkey\"\n    export AWS_DEFAULT_REGION=\"us-west-2\"\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	
++++ b/README.md	
+@@ -24,7 +24,7 @@
+ 
+ ### show current state of a specific resource/data
+ 
+-    terraform state show aws_vpc.myapp-vpc    
++    terraform state show aws_vpc.myapp-vpc
+ 
+ ### set avail_zone as custom tf environment variable - before apply
+ 
+@@ -35,4 +35,3 @@
+     export AWS_ACCESS_KEY_ID="anaccesskey"
+     export AWS_SECRET_ACCESS_KEY="asecretkey"
+     export AWS_DEFAULT_REGION="us-west-2"
+-
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/workspace.xml	
+@@ -0,0 +1,72 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ChangeListManager">
++    <list default="true" id="28d21f57-684a-4a6a-8a23-3395c8a8b385" name="Changes" comment="Initial commit">
++      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/main.tf" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="feature/provisioners" />
++      </map>
++    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="UPDATE_TYPE" value="REBASE" />
++  </component>
++  <component name="ProjectId" id="23DEyFvkONjzcOht1FjiXT0Ro6S" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">
++    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
++    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="28d21f57-684a-4a6a-8a23-3395c8a8b385" name="Changes" comment="" />
++      <created>1641260510628</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1641260510628</updated>
++    </task>
++    <task id="LOCAL-00001" summary="Initial commit">
++      <created>1641260912992</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1641260912992</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
++    <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++    <option name="oldMeFiltersMigrated" value="true" />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Initial commit" />
++    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
++  </component>
++</project>
+\ No newline at end of file
